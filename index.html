@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video JS</title>
+
+    <!-- Video JS CDN-->
+    <link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
+
+</head>
+<body>
+    <body>
+        <video src="videos/video1.mp4" id="myVideo" autoplay>
+            video not supported
+        </video>
+    </body>
+        <script type='text/javascript'>
+            var count=1;
+        var player=document.getElementById('myVideo');
+        player.addEventListener('ended',myHandler,false);
+    
+        function myHandler(e) {
+            if(!e) 
+            { e = window.event; }
+            count++;
+            player.src="videos/video"+count+".mp4";
+            }
+    </script>
+  <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
+</body>
+</html>
